@@ -1,0 +1,45 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <script>
+        window.location.href = "/Home/Chat";
+    </script>
+}
+else
+{
+<div class="container py-5">
+        <div class="container content-container">
+        <div class="row">
+            <div class="my-custom-card col-md-10">
+                    <div class="card" style="height: 500px; border-radius: 15px; max-width:400px;">
+                        <div class="card-header p-4 border-bottom-0"
+                             style="border-top-left-radius: 15px; border-top-right-radius: 15px; background-color: #164863;">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <p class="mb-0 fw-bold" style="color: white;">Live chat</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body" style="background-color:#DDF2FD;padding-top:50px;">
+                            <div class="col-12 text-center">
+                                <img src="~/images/chat2.png" alt="Logo" style="max-width: 300px; filter: invert(22%) sepia(30%) saturate(1399%) hue-rotate(159deg) brightness(91%) contrast(88%);" />
+                            </div>
+                            <div class="col-12 text-center pb-5">
+                                <p class="mb-0 fw-bold" style="color: #164863;">
+                                    BLOWFISH<span style="color: #427D9D;">CHAT</span>
+                                </p>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <a class="btn" style="background-color:#164863; color:white; font-size: 20px; padding: 8px 40px; border-radius:20px;"asp-area="Identity" asp-controller="Account" asp-action="Login">login</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a class="btn" style="background-color: slategray; color:white; font-size: 20px; padding: 8px 40px; border-radius:20px;" asp-area="Identity" asp-controller="Account" asp-action="Register">register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>    
+    </div>
+</div>
+}

@@ -1,0 +1,56 @@
+﻿<section>
+    <div class="container py-5">
+        <div class="container content-container">
+            <div class="row">
+                <div class="my-custom-card col-lg-6 col-xl-4">
+
+                    <div class="card" id="chat1" style="border-radius: 15px;">
+                        <div class="card-header d-flex justify-content-center align-items-center p-3 text-white border-bottom-0"
+                             style="border-top-left-radius: 15px; border-top-right-radius: 15px; background-color: #164863;">
+                            <i class="fas fa-angle-left"></i>
+                            <p class="mb-0 fw-bold">Live chat</p>
+                            <i class="fas fa-times"></i>
+                        </div>
+                        <div class="card-body" style="background-color:#DDF2FD;">
+
+                            <div class="row p-3 chat-messages">
+                                <div class="col-12">
+                                    <ul id="messagesList" class="list-unstyled"></ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <hr />
+                            </div>
+
+                            <div class="row p-1">
+                                <div class="col-12">
+                                    <div class="row mb-3">
+                                        <div class="col-5">
+                                            <input type="text" class="form-control" id="userInput">
+                                        </div>
+                                    </div>
+                                    <div class="form-outline flex-end">
+                                        <textarea class="form-control" id="messageInput" rows="4"></textarea>
+                                        <label class="form-label" for="messageInput">Type your message</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12 text-center">
+                                    <button type="button" class="btn" style="background-color:slategray; color:white;" id="decryptButton">Decrypt Message</button>
+                                    <button type="button" class="btn" style="background-color:#164863; color: white;" id="sendButton">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>var userName = '@User.Identity.Name';</script>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/blowfish.js"></script>
+<script src="~/js/chat.js"></script>
